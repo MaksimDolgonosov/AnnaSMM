@@ -1,0 +1,30 @@
+@import 'libs/bootstrap-reboot.min';
+
+
+@font-face {
+    font-family: 'BubbleboddyNeue';
+    src: url("../fonts/Bobbleboddy_light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'BubbleboddyNeue';
+    src: url("../fonts/Bobbleboddy.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+* {
+    font-family: 'BubbleboddyNeue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+@import "blocks/header.scss"
