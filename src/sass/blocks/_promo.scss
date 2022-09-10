@@ -1,0 +1,25 @@
+.promo {
+    background: url("../img/main_background.jpg") no-repeat 100%/cover;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_photo {
+        width: 350px;
+
+        img {
+            width: 100%;
+
+        }
+    }
+
+    &_text {
+        padding-left: 10px;
+        text-align: center;
+        font-size: 24px;
+        color: azure;
+    }
+
+}
