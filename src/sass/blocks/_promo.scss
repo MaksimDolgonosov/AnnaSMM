@@ -1,0 +1,13 @@
+.promo {
+    padding-top: 100px;
+    min-height: 600px;
+    // background: url("../img/background.jpg") no-repeat 100%/cover;
+    background: rgb(245,200,234);
+    background: linear-gradient(90deg, rgba(245,200,234,1) 0%, rgba(232,162,227,1) 35%, rgba(219,133,190,1) 100%);
+    &__img {
+        width: 500px;
+        img {
+            width: 100%;
+        }
+    }
+}

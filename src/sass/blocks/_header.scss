@@ -1,0 +1,53 @@
+.header {
+    margin-top: 20px;
+    position: fixed;
+    width: 100%;
+    max-width: inherit;
+    z-index: 100;
+
+    &__items {
+        height: 60px;
+        background-color: rgb(20, 19, 19);
+        
+        border-radius: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &-item {
+
+            a {
+                font-family: 'Rubik Dirt';
+                font-weight: 400;
+                font-size: 20px;
+                text-decoration: none;
+                color: antiquewhite;
+
+            }
+        }
+    }
+
+
+
+    &__hamburger {
+        display: none;
+        visibility: hidden;
+        position: absolute;
+        width: 35px;
+        height: 20px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 11;
+
+        span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 5px;
+            transition: 0.3s all;
+        }
+    }
+}

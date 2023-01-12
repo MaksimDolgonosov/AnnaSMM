@@ -24,7 +24,8 @@
 .container {
     width: 1140px;
     margin: 0 auto;
-    background-color: white;
+    position: relative;
 }
 
-@import "blocks/header.scss"
+@import "blocks/header.scss";
+@import "blocks/promo.scss";
