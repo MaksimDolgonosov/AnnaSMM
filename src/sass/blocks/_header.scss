@@ -1,5 +1,4 @@
 .header {
-    margin-top: 20px;
     position: fixed;
     width: 100%;
     max-width: inherit;
@@ -7,9 +6,9 @@
 
     &__items {
         height: 60px;
-        background-color: rgb(20, 19, 19);
+        background-color: rgba(20, 19, 19, 0.7);
         
-        border-radius: 20px;
+        border-radius: 0px;
         width: 100%;
         display: flex;
         justify-content: space-around;
