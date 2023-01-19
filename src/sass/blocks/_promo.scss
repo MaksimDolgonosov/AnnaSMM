@@ -1,7 +1,7 @@
 .promo {
     padding-top: 80px;
     min-height: 600px;
-    background: url("../img/background4.jpg") no-repeat 100%/cover;
+    // background: url("../img/background4.jpg") no-repeat 100%/cover;
     // background: rgb(245,200,234);
     // background: linear-gradient(90deg, rgba(245,200,234,1) 0%, rgba(232,162,227,1) 35%, rgba(219,133,190,1) 100%);
     &__wrapper {
@@ -17,7 +17,7 @@
     &__descr {
         padding-left: 20px;
         width: 52%;
-        border-left: 1px solid rgb(124, 92, 40);
-        border-right: 1px solid rgb(124, 92, 40);
+        border-left: $line_color;
+        border-right: $line_color;
     }
 }
