@@ -1,0 +1,19 @@
+@keyframes line_appearance_vert {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes line_appearance_horz {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
