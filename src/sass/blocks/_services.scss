@@ -2,8 +2,20 @@
     border-top: 1px solid $line_color;
     min-height: 1080px;
     h2 {
+        font-size: 28px;
         margin-top: 20px;
+        margin-bottom: 20px;
         text-transform: uppercase;
+
+    }
+    &__wrapper {
+        border-top: 1px solid $line_color;
+        min-height: 500px;
+
+    };
+    &__wrapper .container {
+       border-left: 1px solid $line_color;
+       border-right: 1px solid $line_color;
     }
 
 }
