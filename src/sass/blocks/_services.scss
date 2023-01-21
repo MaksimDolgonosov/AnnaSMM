@@ -1,6 +1,7 @@
 .services {
     border-top: 1px solid $line_color;
     min-height: 1080px;
+
     h2 {
         font-size: 28px;
         margin-top: 20px;
@@ -8,14 +9,47 @@
         text-transform: uppercase;
 
     }
+
     &__wrapper {
         border-top: 1px solid $line_color;
         min-height: 500px;
 
-    };
+        &__items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__item {
+            margin-top: 10px;
+            border: 2px solid $line_color;
+            border-radius: 20px;
+            background-color: rgba(168, 162, 150, 0.822);
+            &-header {
+                display: flex;
+                align-items:center;
+                justify-content:space-between;
+                &-circle {
+                    width: 26px;
+                    height: 26px;
+                    margin-right: 10px;
+                }
+            }
+
+            h3 {
+                color: rgb(243, 255, 255);
+                font-size: 26px;
+                margin-left: 10px;
+            }
+        }
+
+    }
+
+    ;
+
     &__wrapper .container {
-       border-left: 1px solid $line_color;
-       border-right: 1px solid $line_color;
+        border-left: 1px solid $line_color;
+        border-right: 1px solid $line_color;
     }
 
 }
