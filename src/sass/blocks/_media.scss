@@ -61,6 +61,23 @@
             }
         }
     }
+    .services {
+        &__wrapper {
+            &__item {
+                width: 457px;
+                &-header {
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+                &-price{
+                    &-value {
+                        width: 45%;
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -172,6 +189,31 @@
             }
         }
     }
+    .services {
+        &__wrapper {
+            &__item {
+                width: 357px;
+                &-header {
+                    h3 {
+                        font-size: 20px;
+
+                    }
+                    &-active {
+                        h3 {
+                            font-size: 20px;
+    
+                        }
+                    }
+                }
+                &-price{
+                    &-value {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 @media(max-width: 429px) {
@@ -231,4 +273,5 @@
             margin-left: 10px;
         }
     }
+
 }
