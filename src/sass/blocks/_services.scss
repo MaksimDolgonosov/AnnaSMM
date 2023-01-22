@@ -23,12 +23,16 @@
         &__item {
             margin-top: 10px;
             border: 2px solid $line_color;
-            border-radius: 20px;
-            background-color: rgba(168, 162, 150, 0.822);
+            border-radius: 15px;
+            background-color: rgba(204, 201, 195, 0.822);
+            max-height: 50px;
+            width: 657px;
+
             &-header {
-                display: flex;
-                align-items:center;
-                justify-content:space-between;
+
+                cursor: pointer;
+                
+
                 &-circle {
                     width: 26px;
                     height: 26px;
@@ -36,11 +40,86 @@
                 }
             }
 
+            
+
             h3 {
-                color: rgb(243, 255, 255);
-                font-size: 26px;
+                position: relative;
+                color: rgb(32, 31, 30);
+                font-size: 22px;
                 margin-left: 10px;
+                line-height: 43px;
+                margin-bottom: 0px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                    border-top: 2px solid rgb(32, 31, 30);
+                    border-right: 2px solid rgb(32, 31, 30);
+                    transform: rotate(135deg);
+                    top: 12px;
+                    right: 15px;
+                    transition: all .3s ease-out;
+                }
             }
+
+            &-accordion {
+                display: none;
+                visibility: hidden;
+                
+            }
+
+            &-data {
+                height: 24px;
+                position: relative;
+                margin-left: 30px;
+                font-size: 18px;
+                line-height: 18px;
+                list-style-type: none;
+
+                &::before {
+                    content: "";
+                    background-image: url('../../icons/services/diamond.svg');
+                    background-size: 18px 18px;
+                    height: 18px;
+                    width: 18px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -20px;
+                }
+            }
+
+            &-cost {
+                border-top: 1px solid $line_color;
+                margin: 0px 10px 10px 10px;
+            }
+
+            &-days {
+                font-size: 20px;
+            }
+
+            &-price {
+                display: flex;
+
+                &-value {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    font-size: 18px;
+                    line-height: 25px;
+                    font-weight: 400;
+                    background-color: rgba(255, 255, 255, 0.3)
+                }
+
+                &-descr {
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+        &__item.active_accordion {
+            max-height: 660px;
         }
 
     }
@@ -50,6 +129,7 @@
     &__wrapper .container {
         border-left: 1px solid $line_color;
         border-right: 1px solid $line_color;
+        height: 100%;
     }
 
 }
