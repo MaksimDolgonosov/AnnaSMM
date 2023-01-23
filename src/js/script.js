@@ -3,7 +3,7 @@
 //burger-menu
 let burger = document.querySelector(".header__hamburger");
 let burgerNav = document.querySelector(".header__items");
-
+const menuItems = document.querySelectorAll(".header__items-item a");
 burger.addEventListener("click", () => {
     if (burgerNav.classList.contains("active_nav")) {
         burgerNav.classList.remove("active_nav");
@@ -13,9 +13,18 @@ burger.addEventListener("click", () => {
         burger.classList.add("active_burger");
     }
 });
+menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+        if (document.querySelector(".header__items").classList.contains("active_nav")) {
+            burgerNav.classList.remove("active_nav");
+            burger.classList.remove("active_burger");
+
+        }
+    });
+});
 
 //accordion
-let servicesItems = document.querySelectorAll(".services__wrapper__item");
+const servicesItems = document.querySelectorAll(".services__wrapper__item");
 
 servicesItems.forEach(item => {
     item.addEventListener("click", e => {
@@ -32,3 +41,9 @@ servicesItems.forEach(item => {
         }
     });
 });
+
+
+
+
+
+

@@ -11,7 +11,8 @@
 
     &__wrapper {
         border-top: 1px solid $line_color;
-        min-height: 500px;
+        border-bottom: 1px solid $line_color;
+        min-height: 400px;
 
         &__items {
             display: flex;
@@ -19,14 +20,15 @@
             align-items: center;
             flex-direction: column;
             padding-top: 20px;
+            padding-bottom: 40px;
 
         }
 
         &__item {
             margin-top: 10px;
-            border: 1px solid $line_color;
-            border-radius: 15px;
-            background-color: rgba(204, 201, 195, 0.822);
+            border-bottom: 1px solid $line_color;
+            // border-radius: 15px;
+            // background-color: rgba(204, 201, 195, 0.822);
             min-height: 50px;
             width: 657px;
             transition: .3s all;
@@ -60,9 +62,9 @@
 
                 &-active {
 
-                    border-radius: 15px;
+                    // border-radius: 15px;
                     min-height: 50px;
-
+                    background-color:rgba(226, 209, 192, 0.3) ;
                     transition: .3s all;
                     cursor: pointer;
 
@@ -110,6 +112,7 @@
                     opacity: 1;
                     max-height: 600px;
                     transition: .3s all;
+                    background-color:rgba(226, 209, 192, 0.3) ;
                 }
             }
 
@@ -121,7 +124,10 @@
                 line-height: 18px;
                 list-style-type: none;
                 transition: .5s all;
-                margin-top: 5px;
+                &:not(:first-child) {
+                    margin-top: 5px;
+                }
+                
                 
 
                 &::before {
@@ -134,12 +140,13 @@
                     top: 50%;
                     transform: translateY(-50%);
                     left: -20px;
+                    
                 }
             }
 
             &-cost {
                 border-top: 1px solid $line_color;
-                margin: 0px 10px 10px 10px;
+                padding: 0px 10px 10px 10px;
             }
 
             &-days {
@@ -158,7 +165,8 @@
                     font-size: 18px;
                     line-height: 36px;
                     font-weight: 400;
-                    background-color: rgba(255, 255, 255, 0.3)
+                    text-shadow: 1px 1px 2px rgba(226, 209, 192, .9), 0 0 1em rgba(226, 209, 192, .9), 0 0 0.2em rgba(226, 209, 192, .9);
+                    // background-color: rgba(255, 255, 255, 0.3)
                 }
 
                 &-descr {
