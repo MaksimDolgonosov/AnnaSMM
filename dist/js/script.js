@@ -69,5 +69,21 @@ leftBtn.addEventListener("click", () => {
 });
 
 
+slidesWrapper.addEventListener("touchstart", function (e) { TouchStart(e); });
+slidesWrapper.addEventListener("touchend", function (e) { TouchEnd(e); });
+
+let touchPositon = 0;
+
+function TouchStart(e) {
+    touchPositon = e.changedTouches[0].clientX;
+}
+function TouchEnd(e) {
+    if (touchPositon - e.changedTouches[0].clientX > 0) {
+        rightBtn.click();
+        touchPositon = 0;
+    }
+}
+
+
 
 
