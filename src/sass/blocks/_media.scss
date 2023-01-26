@@ -35,6 +35,12 @@
             margin-left: 30px;
         }
     }
+
+    .cases {
+        &__nav {
+            width: 25%;
+        }
+    }
 }
 
 
@@ -61,21 +67,30 @@
             }
         }
     }
+
     .services {
         &__wrapper {
             &__item {
                 width: 457px;
+
                 &-header {
                     h3 {
                         font-size: 20px;
                     }
                 }
-                &-price{
+
+                &-price {
                     &-value {
                         width: 45%;
                     }
                 }
             }
+        }
+    }
+
+    .cases {
+        &__nav {
+            width: 33%;
         }
     }
 
@@ -189,28 +204,37 @@
             }
         }
     }
+
     .services {
         &__wrapper {
             &__item {
                 width: 357px;
+
                 &-header {
                     h3 {
                         font-size: 20px;
 
                     }
+
                     &-active {
                         h3 {
                             font-size: 20px;
-    
+
                         }
                     }
                 }
-                &-price{
+
+                &-price {
                     &-value {
                         width: 90%;
                     }
                 }
             }
+        }
+    }
+    .cases {
+        &__nav {
+            width: 40%;
         }
     }
 
@@ -267,11 +291,26 @@
             margin: 0 auto;
         }
     }
+
     .services {
         h2 {
             margin-top: 10px;
             margin-left: 10px;
         }
     }
+    .cases {
+        &__nav {
+            width: 40%;
+            &-left {
+                width: 40px;
+                height: 40px;
+            }
+            &-right {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
 
 }

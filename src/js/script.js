@@ -42,7 +42,31 @@ servicesItems.forEach(item => {
     });
 });
 
+//cases
 
+const leftBtn = document.querySelector(".cases__nav-left");
+const rightBtn = document.querySelector(".cases__nav-right");
+const slidesWrapper = document.querySelector(".cases__slider__slides");
+const slides = document.querySelectorAll(".cases__slider__slide");
+let offset = 0;
+rightBtn.addEventListener("click", () => {
+    if (offset == 274 * (slides.length - 1)) {
+        offset = 0;
+    } else {
+        offset += 274;
+    }
+    slidesWrapper.style.transform = `translateX(-${offset}px)`;
+});
+
+leftBtn.addEventListener("click", () => {
+
+    if (offset == 0) {
+        offset = 274 * (slides.length - 1);
+    } else {
+        offset -= 274;
+    }
+    slidesWrapper.style.transform = `translateX(-${offset}px)`;
+});
 
 
 

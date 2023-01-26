@@ -44,14 +44,15 @@
         overflow: hidden;
         width: 100%;
         padding: 30px 20px;
+        // transition: 1s all;
 
 
         &__slides {
             width: 234px;
-           
             display: flex;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
+            transition: .5s all;
         }
 
         &__slide {
