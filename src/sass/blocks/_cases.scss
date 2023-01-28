@@ -1,9 +1,11 @@
 .cases {
+    border-bottom: 1px solid $line_color;
     &__header {
         &__wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
 
             &-head {
                 font-size: 28px;
