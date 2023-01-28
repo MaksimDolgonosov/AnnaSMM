@@ -26,6 +26,7 @@
         }
 
         &__item {
+            position: relative;
             margin-top: 10px;
             border: 1px solid $line_color;
             // border-radius: 15px;
@@ -34,7 +35,28 @@
             width: 50%;
             transition: .3s all;
             cursor: pointer;
-            
+            margin-bottom: 20px;
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 25px;
+                height: 25px;
+                border-top: 1px solid $line_color;
+                border-right: 1px solid $line_color;
+                transform: rotate(135deg);
+                top: 43px;
+                left: calc(50% - 12.5px);
+                transition: all .3s ease-out;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-name: arrowDown;
+            }
+            &.active-item {
+                &::after {
+                    display: none;
+                }
+            }
 
             &-header {
                 font-size: 22px;
@@ -96,6 +118,7 @@
                         top: 50%;
                         transform: translateY(-50%);
                         left: -20px;
+                        
                     }
                 }
             }

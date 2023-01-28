@@ -1,5 +1,5 @@
 "use strict";
-
+new WOW().init();
 //burger-menu
 let burger = document.querySelector(".header__hamburger");
 let burgerNav = document.querySelector(".header__items");
@@ -105,6 +105,7 @@ const headers = document.querySelectorAll(".stages__wrapper__item-header");
 headers.forEach(header => {
     header.addEventListener("click", e => {
         e.target.nextElementSibling.classList.toggle("active-stage");
-
+        e.target.parentNode.classList.toggle("active-item");
+        console.log(e.target.parentNode);
     });
 });
