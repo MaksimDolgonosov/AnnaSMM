@@ -1,0 +1,110 @@
+.stages {
+
+
+
+    h2 {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+    }
+
+    &__wrapper {
+        border-top: 1px solid $line_color;
+        border-bottom: 1px solid $line_color;
+        min-height: 400px;
+
+        &__items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 40px;
+
+        }
+
+        &__item {
+            margin-top: 10px;
+            border: 1px solid $line_color;
+            // border-radius: 15px;
+            background-color: rgba(203, 199, 193, .4);
+            max-height: 600px;
+            width: 50%;
+            transition: .3s all;
+            cursor: pointer;
+            
+
+            &-header {
+                font-size: 22px;
+                text-align: center;
+                line-height: 48px;
+                height: 38px;
+                transition: .3s all;
+                text-transform: uppercase;
+            }
+
+            &-descr {
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                margin-top: 10px;
+                font-size: 18px;
+                margin-left: 25px;
+                transition: .3s all;
+                padding-right: 20px;
+                li {
+                    position: relative;
+                    list-style-type: none;
+                    margin-left: 20px;
+
+                    &::before {
+                        content: "";
+                        background-image: url(../../icons/services/diamond.svg);
+                        background-size: 18px 18px;
+                        height: 18px;
+                        width: 18px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -20px;
+                    }
+                }
+            }
+
+            &-descr.active-stage {
+                max-height: 250px;
+                opacity: 1;
+                overflow: visible;
+                font-size: 18px;
+                margin-left: 25px;
+                transition: .3s all;
+
+                li {
+                    position: relative;
+                    list-style-type: none;
+                    margin-left: 20px;
+
+                    &::before {
+                        content: "";
+                        background-image: url(../../icons/services/diamond.svg);
+                        background-size: 18px 18px;
+                        height: 18px;
+                        width: 18px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -20px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__wrapper .container {
+        border-left: 1px solid $line_color;
+        border-right: 1px solid $line_color;
+        height: 100%;
+    }
+}

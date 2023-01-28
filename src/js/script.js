@@ -87,7 +87,7 @@ servicesItems.forEach(item => {
 
 const swiper = new Swiper('.swiper', {
     // // Optional parameters
-    loop: true,
+    // loop: true,
     slidesPerView: "auto",
     // Navigation arrows
     navigation: {
@@ -95,4 +95,16 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.cases__nav-left',
     },
 
+});
+
+
+// accordion stages
+
+const headers = document.querySelectorAll(".stages__wrapper__item-header");
+
+headers.forEach(header => {
+    header.addEventListener("click", e => {
+        e.target.nextElementSibling.classList.toggle("active-stage");
+
+    });
 });

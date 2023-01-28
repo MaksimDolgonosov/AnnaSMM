@@ -35,6 +35,13 @@
             margin-left: 30px;
         }
     }
+    .stages {
+        &__wrapper {
+            &__item {
+                width: 70%;
+            }
+        }
+    }
 
     .cases {
         &__nav {
@@ -84,6 +91,13 @@
                         width: 45%;
                     }
                 }
+            }
+        }
+    }
+    .stages {
+        &__wrapper {
+            &__item {
+                width: 80%;
             }
         }
     }
@@ -229,6 +243,13 @@
                         width: 90%;
                     }
                 }
+            }
+        }
+    }
+    .stages {
+        &__wrapper {
+            &__item {
+                width: 90%;
             }
         }
     }
