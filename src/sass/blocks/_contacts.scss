@@ -1,0 +1,204 @@
+.contacts {
+    h2 {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+    }
+
+    &__line__100vw {
+        width: 100vw;
+        height: 1px;
+        background-color: $line_color;
+    }
+
+    &__wrapper {
+        padding: 20px 36px 40px 50px;
+        display: grid;
+        grid-template-columns: 455px 532px;
+        column-gap: 65px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__descr {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+
+    &__title {
+        position: relative;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        font-weight: 300;
+        font-size: 28px;
+        // line-height: 60px;
+    }
+
+    &__line {
+        width: 100px;
+        height: 1px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        background-color: $line_color;
+    }
+
+    &__way {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 21px;
+        color: black;
+    }
+
+    &__social {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            transform: rotate(90deg);
+            margin-right: 20px;
+        }
+    }
+
+    &__form {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 256px);
+        grid-template-rows: 45px 194px 45px;
+        column-gap: 20px;
+        row-gap: 26px;
+
+        &-input {
+            position: relative;
+
+            input {
+                padding: 0 20px;
+                width: 256px;
+                height: 45px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+                border: 1px solid $line_color;
+            }
+
+            label {
+                display: block;
+                position: absolute;
+                min-width: 75px;
+                height: 18px;
+                padding: 0 8px;
+                // background-color: rgb(231, 226, 216);
+
+                top: -19px;
+                left: 12px;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 18px;
+            }
+
+
+        }
+
+        &-textarea {
+            position: relative;
+            grid-column: 1/3;
+
+            textarea {
+                width: 532px;
+                height: 194px;
+                padding: 20px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+                resize: none;
+                border: 1px solid $line_color;
+
+            }
+
+            label {
+                display: block;
+                position: absolute;
+                min-width: 75px;
+                height: 18px;
+                padding: 0 8px;
+                // background-color: #fff;
+                top: -19px;
+                left: 12px;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 18px;
+            }
+        }
+
+        &-button {
+            grid-column: 1/3;
+            display: grid;
+            grid-template-columns: 207px 295px;
+            column-gap: 30px;
+
+            .btn {
+                border: 1px solid $line_color;
+                // width: 219px;
+                // height: 45px;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 21px;
+            }
+
+            &-policy {
+                display: flex;
+                align-items: center;
+
+                input {
+                    margin-right: 7px;
+                }
+
+                span {
+                    align-self: center;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+            }
+
+        }
+    }
+
+    & .container {
+        &:nth-child(2) {
+            border-left: 1px solid $line_color;
+            border-right: 1px solid $line_color;
+            height: 100%;
+        }
+
+    }
+}
+
+.overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, .56);
+    transition: all .6s;
+}
