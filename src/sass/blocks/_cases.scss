@@ -1,11 +1,12 @@
 .cases {
     border-bottom: 1px solid $line_color;
+
     &__header {
         &__wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
+
 
             &-head {
                 font-size: 28px;
@@ -61,6 +62,7 @@
         &__slide {
             width: 234px;
             margin: 20px;
+            cursor: pointer;
 
             &-descr {
                 text-transform: uppercase;
@@ -73,6 +75,11 @@
 
             &-img {
                 width: 234px;
+                transition: .3s all;
+
+                &:hover {
+                    transform: scale(1.07);
+                }
 
                 img {
                     width: 100%;
@@ -99,7 +106,7 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background:$line_color;
+            background: $line_color;
             margin-left: -2px;
             left: 8px;
             top: 8px;

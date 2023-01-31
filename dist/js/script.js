@@ -85,7 +85,7 @@ servicesItems.forEach(item => {
 // }
 
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.cases__slider', {
     // // Optional parameters
     // loop: true,
     slidesPerView: "auto",
@@ -108,4 +108,15 @@ headers.forEach(header => {
         e.target.parentNode.classList.toggle("active-item");
         console.log(e.target.parentNode);
     });
+});
+
+const swiperDiploms = new Swiper('.diploms__slider', {
+    // // Optional parameters
+    // loop: true,
+    slidesPerView: "auto",
+    // Navigation arrows
+    autoplay: {
+        delay: 5000,
+    },
+
 });
