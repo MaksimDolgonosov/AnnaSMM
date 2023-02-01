@@ -115,8 +115,131 @@ const swiperDiploms = new Swiper('.diploms__slider', {
     // loop: true,
     slidesPerView: "auto",
     // Navigation arrows
-    autoplay: {
-        delay: 5000,
-    },
+    // autoplay: {
+    //     delay: 5000,
+    // },
 
 });
+
+
+// отправка формы
+const forms = document.querySelectorAll("form");
+
+forms.forEach(form => postData(form));
+
+function postData(form) {
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        const request = new XMLHttpRequest();
+        request.open("POST", "mailer/smart.php");
+        const formData = new FormData(form);
+        request.send(formData);
+        request.addEventListener("load", () => {
+            // console.log(request.status);
+            // console.log(formData);
+            if (request.status == 200) {
+                form.reset();
+                document.querySelector('.overlay').style.visibility = "visible";
+                document.querySelector('.modal_thanks').style.visibility = "visible";
+                document.querySelector('.overlay').style.opacity = "1";
+                document.querySelector('.modal_thanks').style.opacity = "1";
+                document.body.style.overflow = "none";
+                setTimeout(() => {
+                    document.querySelector('.overlay').style.visibility = "hidden";
+                    document.querySelector('.modal_thanks').style.visibility = "hidden";
+                    document.querySelector('.overlay').style.opacity = "0";
+                    document.querySelector('.modal_thanks').style.opacity = "0";
+                    document.body.style.overflow = "";
+                }, 3000);
+
+            } else {
+
+                document.querySelector('.overlay').style.visibility = "visible";
+                document.querySelector('.modal_error').style.visibility = "visible";
+                document.querySelector('.overlay').style.opacity = "1";
+                document.querySelector('.modal_error').style.opacity = "1";
+                document.body.style.overflow = "none";
+                setTimeout(() => {
+                    document.querySelector('.overlay').style.visibility = "hidden";
+                    document.querySelector('.modal_error').style.visibility = "hidden";
+                    document.querySelector('.overlay').style.opacity = "0";
+                    document.querySelector('.modal_error').style.opacity = "0";
+                    document.body.style.overflow = "";
+                }, 3000);
+            }
+
+        });
+    });
+}
+
+
+//открытие картинок
+
+const cases = document.querySelector(".cases__slider");
+const diploms = document.querySelector(".diploms__slider");
+addBigImage(cases, "cases__slider__slide");
+addBigImage(diploms, "diploms__slider__slide");
+
+function addBigImage(classItem, imageItem) {
+    const imgDiv = document.createElement("div");
+    const bigImg = document.createElement("img");
+    const close = document.createElement("div");
+
+    close.textContent = `×`;
+    close.style.cssText = `
+position: absolute;
+top: -15px;
+right: -15px;
+font-size: 5rem;
+width: 5rem;
+height: 5rem;
+line-height: 5rem;
+text-align: center;
+background: transparent;
+color: #ffffff;
+border: none;
+cursor: pointer`;
+
+    classItem.appendChild(imgDiv);
+    imgDiv.classList.add("popup");
+    close.classList.add("popup__close");
+    imgDiv.style.justifyContent = "center";
+    imgDiv.style.alignItems = "center";
+    imgDiv.style.display = "none";
+    imgDiv.appendChild(bigImg);
+    imgDiv.appendChild(close);
+    classItem.addEventListener("click", e => {
+        e.preventDefault();
+
+        if (e.target && e.target.parentNode.parentNode.classList.contains(imageItem)) {
+            imgDiv.style.display = "flex";
+            document.body.style.overflow = "hidden";
+            console.log(e.target);
+            const srcImage = e.target.getAttribute('src');
+            bigImg.setAttribute("src", `../${srcImage}`);
+            bigImg.style.zIndex = "99";
+            if (window.innerWidth < 605 && imageItem === "diploms__slider__slide") {
+                bigImg.style.width = "90vw";
+                // bigImg.style.height = "80vh";
+            } else {
+                bigImg.style.height = "72vh";
+            }
+
+            // bigImg.style.width = "90vw";
+
+            document.querySelector(".header").style.display = "none";
+            burgerNav.style.display = "none";
+
+        }
+        if (e.target && e.target.classList.contains("popup") || e.target && e.target.classList.contains("popup__close")) {
+            imgDiv.style.display = "none";
+            document.body.style.overflow = "";
+            burgerNav.style.display = "flex";
+            document.querySelector(".header").style.display = "block";
+        }
+    });
+}
+
+
+
+
