@@ -95,6 +95,8 @@ const swiper = new Swiper('.cases__slider', {
         nextEl: '.cases__nav-right',
         prevEl: '.cases__nav-left',
     },
+
+
     effect: "coverflow",
     coverflowEffect: {
         rotate: 0,

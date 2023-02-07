@@ -372,6 +372,9 @@
             }
         }
         &__table {
+            h2 {
+                font-size: 20px;
+            }
             &__items {
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(6, 60px);
@@ -390,6 +393,11 @@
 
                 span {
                     font-size: 17px;
+                    &::before {
+                        top: 11px;
+
+
+                    }
                 }
             }
         }
@@ -589,7 +597,7 @@
 
     .services {
         h2 {
-            margin-top: 10px;
+            margin-top: 20px;
             margin-left: 10px;
         }
     }
