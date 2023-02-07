@@ -89,11 +89,20 @@ const swiper = new Swiper('.cases__slider', {
     // // Optional parameters
     // loop: true,
     slidesPerView: "auto",
+    centeredSlides: true,
     // Navigation arrows
     navigation: {
         nextEl: '.cases__nav-right',
         prevEl: '.cases__nav-left',
     },
+    effect: "coverflow",
+    coverflowEffect: {
+        rotate: 0,
+        scale: 0.93,
+        
+        slideShadows: false,
+        
+    }
 
 });
 
@@ -113,7 +122,9 @@ headers.forEach(header => {
 const swiperDiploms = new Swiper('.diploms__slider', {
     // // Optional parameters
     // loop: true,
+
     slidesPerView: "auto",
+
     // Navigation arrows
     // autoplay: {
     //     delay: 5000,
