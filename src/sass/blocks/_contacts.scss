@@ -1,5 +1,6 @@
 .contacts {
     background: url("../img/background4.jpg") no-repeat 100%/cover;
+
     h2 {
         font-size: 28px;
         padding-top: 20px;
@@ -71,20 +72,41 @@
         margin-top: 20px;
         margin-bottom: 20px;
 
+        &__block {
+            width: 100%;
+            height: 50px;
+
+            background-color: rgba(203, 199, 193, .4);
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $line_color;
+
+            span {
+                display: block;
+                font-size: 20px;
+                font-weight: 200;
+                color: #9b7f56;
+                line-height: 20px;
+            }
+        }
+
         a {
+            display: block;
+            margin: 10px 0px;
+
             &:hover {
                 text-decoration: none;
             }
         }
 
         svg {
-            width: 40px;
-            height: 40px;
-            margin-right: 20px;
-            transition: .3s all;
-            &:hover {
-                transform: scale(1.1);
-            }
+            margin-top: 5px;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+
         }
     }
 
@@ -167,27 +189,19 @@
             .btn {
                 border: 1px solid $line_color;
                 // width: 219px;
-                // height: 45px;
+                height: 50px;
                 font-weight: 700;
                 font-size: 15px;
                 line-height: 21px;
+                border-radius: 50px;
+                background-color: rgba(203, 199, 193, .4);
+                // font-size: 20px;
+                // font-weight: 200;
+                color: #9b7f56;
+                // line-height: 20px;
             }
 
-            &-policy {
-                display: flex;
-                align-items: center;
 
-                input {
-                    margin-right: 7px;
-                }
-
-                span {
-                    align-self: center;
-                    font-weight: 500;
-                    font-size: 12px;
-                    line-height: 12px;
-                }
-            }
 
         }
     }
@@ -201,4 +215,3 @@
 
     // }
 }
-

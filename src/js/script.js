@@ -123,14 +123,19 @@ const swiperDiploms = new Swiper('.diploms__slider', {
     pagination: {
         el: ".diploms__pagination",
         clickable: true,
-    }
+    },
+
+    effect: "fade",
+    fadeEffect: {
+        crossFade: true,
+    },
+    speed: 1000,
     // Navigation arrows
     // autoplay: {
     //     delay: 5000,
     // },
 
 });
-
 
 // отправка формы
 const forms = document.querySelectorAll("form");
@@ -224,7 +229,6 @@ cursor: pointer`;
         if (e.target && e.target.parentNode.parentNode.classList.contains(imageItem)) {
             imgDiv.style.display = "flex";
             document.body.style.overflow = "hidden";
-            console.log(e.target);
             const srcImage = e.target.getAttribute('src');
             bigImg.setAttribute("src", `../${srcImage}`);
             bigImg.style.zIndex = "99";
