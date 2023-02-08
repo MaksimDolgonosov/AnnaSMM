@@ -461,17 +461,35 @@
     .diploms {
         &__slider {
             &__slide {
+                height: 200px;
                 &-img {
+                    height: 200px;
                     &:hover {
                         transform: none;
                     }
                 }
             }
         }
+        &__nav {
+            &-left {
 
-        & .cases__scroll-icon {
-            display: block;
+                width: 40px;
+                height: 40px;
+                left: 10px;
+
+
+            }
+    
+            &-right {
+
+                width: 40px;
+                height: 40px;
+                right: 10px;
+
+            }
+    
         }
+
     }
 
     .contacts {
@@ -616,6 +634,38 @@
                 height: 40px;
             }
         }
+    }
+    .diploms {
+        &__slider {
+            &__slide {
+                height: 150px;
+                margin-bottom: 40px;
+                &-img {
+                    height: 150px;
+
+                }
+            }
+        }
+        // &__nav {
+        //     &-left {
+
+        //         width: 30px;
+        //         height: 30px;
+        //         left: 5px;
+
+
+        //     }
+    
+        //     &-right {
+
+        //         width: 30px;
+        //         height: 30px;
+        //         right: 5px;
+
+        //     }
+    
+        // }
+
     }
 
 

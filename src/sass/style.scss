@@ -52,6 +52,11 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 99;
     background-color: rgba(0,0,0,.5);
 }
+.cases__slider .swiper-slide-active {
+    transition: .6s all;
+    scale: 1.15;
+    margin: 20px;
+}
 
 @import "base/variables";
 @import "base/mixins";

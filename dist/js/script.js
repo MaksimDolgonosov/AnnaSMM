@@ -96,16 +96,6 @@ const swiper = new Swiper('.cases__slider', {
         prevEl: '.cases__nav-left',
     },
 
-
-    effect: "coverflow",
-    coverflowEffect: {
-        rotate: 0,
-        scale: 0.93,
-        
-        slideShadows: false,
-        
-    }
-
 });
 
 
@@ -123,10 +113,17 @@ headers.forEach(header => {
 
 const swiperDiploms = new Swiper('.diploms__slider', {
     // // Optional parameters
-    // loop: true,
-
-    slidesPerView: "auto",
-
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.diploms__nav-right',
+        prevEl: '.diploms__nav-left',
+    },
+    pagination: {
+        el: ".diploms__pagination",
+        clickable: true,
+    }
     // Navigation arrows
     // autoplay: {
     //     delay: 5000,

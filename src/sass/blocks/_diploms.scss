@@ -1,6 +1,8 @@
 .diploms {
+    position: relative;
     background: url("../img/background4.jpg") no-repeat 100%/cover;
     z-index: 9;
+
     h2 {
         font-size: 28px;
         padding-top: 20px;
@@ -9,56 +11,108 @@
 
     }
 
+    &__nav {
+        &-left {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 98;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-right {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 98;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+    &__pagination {
+        position: absolute;
+        
+        height: 20px;
+        // background-color: #000000;
+        // bottom: 0;
+        // left: 50%;
+        transform: translateX(-50%);
+        &.swiper-pagination-bullets{
+            &.swiper-pagination-horizontal {
+                left: calc(50% + 55px) ;
+                // transform: translateX(10px);
+                width: 190px;
+                & .swiper-pagination-bullet {
+                    width: 10px;
+                    height: 10px;
+                    background-color: $line_color;
+                    transition: .3s all;
+                }
+            }   
+        }
+
+    }
 
     &__slider {
         position: relative;
-        border-top: 1px solid $line_color;
-        border-bottom: 1px solid $line_color;
+        // border-top: 1px solid $line_color;
+        // border-bottom: 1px solid $line_color;
         min-height: 100px;
         overflow: hidden;
-
+        width: 100%;
 
         padding: 0px 0px 10px 0px;
-        // transition: 1s all;
-
 
         &__slides {
-            max-width: 1056px;
-            margin: 20px auto;
+            // width: 234px;
             // display: flex;
             // justify-content: center;
             // align-items: center;
-            transition: .5s all;
-
+            // transition: .5s all;
         }
 
         &__slide {
-            width: 234px;
-            // width: 25%;
-            min-height: 200px;
-            margin: auto 15px auto 15px;
+            // width: 234px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            height: 300px;
             cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
 
             &-img {
-                width: 100%;
-                height: 100%;
-                border: 1px solid $line_color;
+                height: 300px;
                 transition: .3s all;
+                // margin: auto 0;
                 &:hover {
-                    transform: scale(1.1);
+                    transform: scale(1.07);
                 }
 
                 img {
-                    object-fit: cover;
-                    width: 100%;
                     height: 100%;
                 }
             }
         }
     }
 
-    & .cases__scroll-icon {
-        display: none;
-    }
 }
+
