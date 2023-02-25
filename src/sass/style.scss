@@ -1,33 +1,61 @@
 @import 'libs/bootstrap-reboot.min';
 
 
-@font-face {
-    font-family: 'Oswald';
-    src: url("../fonts/Oswald-ExtraLight.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 200;
-}
-@font-face {
-    font-family: 'Oswald';
-    src: url("../fonts/Oswald-Light.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 300;
-}
+// @font-face {
+//     font-family: 'Oswald';
+//     src: url("../fonts/Oswald-ExtraLight.ttf") format("truetype");
+//     font-style: normal;
+//     font-weight: 200;
+// }
+// @font-face {
+//     font-family: 'Oswald';
+//     src: url("../fonts/Oswald-Light.ttf") format("truetype");
+//     font-style: normal;
+//     font-weight: 300;
+// }
 
+// @font-face {
+//     font-family: 'Oswald';
+//     src: url("../fonts/Oswald-Regular.ttf") format("truetype");
+//     font-style: normal;
+//     font-weight: 400;
+// }
+// @font-face {
+//     font-family: 'Avanti Bold';
+//     src: url("../fonts/avanti.ttf") format("truetype");
+//     font-style: normal;
+//     font-weight: 400;
+// }
 @font-face {
-    font-family: 'Oswald';
-    src: url("../fonts/Oswald-Regular.ttf") format("truetype");
+    font-family: 'Avanti';
+    src: url('../fonts/AvantiBold.eot');
+    src: url('../fonts/AvantiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvantiBold.woff2') format('woff2'),
+        url('../fonts/AvantiBold.woff') format('woff'),
+        url('../fonts/AvantiBold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Avanti';
+    src: url('../fonts/Avanti.eot');
+    src: url('../fonts/Avanti.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Avanti.woff2') format('woff2'),
+        url('../fonts/Avanti.woff') format('woff'),
+        url('../fonts/Avanti.ttf') format('truetype');
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
-
+// @import url(https://allfont.ru/allfont.css?fonts=avanti-bold);
 // @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Roboto:wght@100;300;400;500;700&display=swap');
 
 // font-family: 'Oswald', sans-serif;
 // font-family: 'Roboto', sans-serif;
 * {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
+    font-family: 'Avanti', sans-serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
 }
