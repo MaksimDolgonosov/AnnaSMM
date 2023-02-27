@@ -15,6 +15,10 @@
                 grid-template-columns: auto 320px 320px 320px auto;
             }
         }
+
+        & .contacts__social {
+            display: none;
+        }
     }
 
     .contacts {
@@ -85,7 +89,12 @@
         }
 
         &__descr {
+
             margin-left: 30px;
+
+            & p {
+                font-size: 14px;
+            }
         }
 
         &__table {
@@ -102,6 +111,23 @@
                 }
             }
         }
+
+    }
+
+    .services {
+        &__wrapper {
+            &__information {
+                &-header {
+                    font-size: 20px;
+                }
+                &-descr {
+                    font-size: 18px;
+                }
+                &-payment {
+                    font-size: 19px;
+                }
+            }
+        }
     }
 
 
@@ -110,6 +136,16 @@
         &__wrapper {
             &__item {
                 width: 70%;
+                &-header {
+                    font-size: 18px;
+                }
+                &-descr {
+                    & li {
+                        font-size: 16px;
+                        margin-top: 5px;
+                    }
+                    
+                }
             }
         }
     }
@@ -117,6 +153,9 @@
     .cases {
         &__nav {
             width: 25%;
+            &-text {
+                font-size: 15px;
+            }
         }
     }
 
@@ -231,7 +270,7 @@
     .services {
         &__wrapper {
             &__item {
-                width: 457px;
+                 width: 480px;
 
                 &-header {
                     h3 {
@@ -371,10 +410,12 @@
                 font-size: 18px;
             }
         }
+
         &__table {
             h2 {
                 font-size: 20px;
             }
+
             &__items {
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(6, 60px);
@@ -382,17 +423,20 @@
 
             &__item {
                 &.right {
-                    border-right: 1px solid $line_color; 
+                    border-right: 1px solid $line_color;
                 }
+
                 &.bottom {
-                   
-                    border-bottom: 1px solid $line_color; 
+
+                    border-bottom: 1px solid $line_color;
                 }
+
                 border-left: 1px solid $line_color;
                 padding: 10px 10px 10px 10px;
 
                 span {
                     font-size: 17px;
+
                     &::before {
                         top: 11px;
 
@@ -411,13 +455,13 @@
 
                 &-header {
                     h3 {
-                        font-size: 20px;
+                        font-size: 15px;
 
                     }
 
                     &-active {
                         h3 {
-                            font-size: 20px;
+                            font-size: 15px;
 
                         }
                     }
@@ -427,6 +471,13 @@
                     &-value {
                         width: 90%;
                     }
+                }
+                &-data {
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+                &-days {
+                    font-size: 15px;
                 }
             }
         }
@@ -462,14 +513,17 @@
         &__slider {
             &__slide {
                 height: 200px;
+
                 &-img {
                     height: 200px;
+
                     &:hover {
                         transform: none;
                     }
                 }
             }
         }
+
         &__nav {
             &-left {
 
@@ -479,7 +533,7 @@
 
 
             }
-    
+
             &-right {
 
                 width: 40px;
@@ -487,7 +541,7 @@
                 right: 10px;
 
             }
-    
+
         }
 
     }
@@ -554,6 +608,7 @@
                     line-height: 21px;
                     color: rgb(32, 31, 30);
                 }
+                margin-bottom: 20px;
 
             }
         }
@@ -635,17 +690,20 @@
             }
         }
     }
+
     .diploms {
         &__slider {
             &__slide {
                 height: 150px;
                 margin-bottom: 40px;
+
                 &-img {
                     height: 150px;
 
                 }
             }
         }
+
         // &__nav {
         //     &-left {
 
@@ -655,7 +713,7 @@
 
 
         //     }
-    
+
         //     &-right {
 
         //         width: 30px;
@@ -663,7 +721,7 @@
         //         right: 5px;
 
         //     }
-    
+
         // }
 
     }
